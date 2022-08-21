@@ -1,15 +1,20 @@
-let bot: any;
+import { BOT } from '../bot.js';
 class Message {
-    constructor(bot: any) {
-        bot = bot;
-    }
+    bot = BOT;
+
+
     goodMorning() {
-        bot.sendMessage('', 'Good morning');
+        this.bot.sendMessage('', 'Good morning');
     }
     goodNight() {
-        bot.sendMessage('', 'Good night');
+        this.bot.sendMessage('', 'Good night');
     }
-
+    message(message: string) {
+        this.bot.sendMessage('', message);
+    }
+    weekendMessage() {
+        this.bot.sendMessage('', "It's the weekend, have a nice weekend");
+    }
 }
 
 

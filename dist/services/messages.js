@@ -1,13 +1,17 @@
-let bot;
+import { BOT } from '../bot.js';
 class Message {
-    constructor(bot) {
-        bot = bot;
+    constructor() {
+        this.bot = BOT;
     }
     goodMorning() {
-        bot.sendMessage('', 'Good morning');
+        console.error('Good morning');
+        this.bot.sendMessage('', 'Good morning');
     }
     goodNight() {
-        bot.sendMessage('', 'Good night');
+        this.bot.sendMessage('', 'Good night');
+    }
+    message(message) {
+        this.bot.sendMessage('', message);
     }
 }
 export default Message;
